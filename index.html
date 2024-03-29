@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rancho Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <div></div>
+          <ul id="sidemenu">
+            <li><a href="#header">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="servicios.html">servicios</a></li>
+            <li><a href="proyectos.html">proyectos</a></li>
+            <li><a href="contacto.html">contacto</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-ellipsis" onclick="openmenu()"></i>
+        </nav>
+        <div class="test">
+          <div class="header-text">
+            <img src="images/logobn.png" class="logobn" />
+            <h1>INTERIOR DESIGN STUDIO</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- - - -- -  about  - - -- - - --->
+    <!-- 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/us.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">about us</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illum similique recusandae
+                        culpa facilis non, velit, aperiam ullam qui sint a cupiditate, nisi quam dolorem. Veniam facere
+                        inventore earum vel!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    - - -- -  servicios  - - -- - - --->
+    <!--
+
+    
+    <div id="servicios">
+        <div class="container">
+            <h1 class="sub-title">servicios</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-house"></i>
+                    <h2>Diseño de Interiores</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor inventore aliquid illo omnis
+                        voluptas dolores enim porro incidunt blanditiis ipsam. Blanditiis quas repellat perspiciatis
+                        officiis accusantium amet enim, unde dolorum!</p>
+                    <a href="#">más info</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-airbnb"></i>
+                    <h2>Airbnb Staging</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor inventore aliquid illo omnis
+                        voluptas dolores enim porro incidunt blanditiis ipsam. Blanditiis quas repellat perspiciatis
+                        officiis accusantium amet enim, unde dolorum!</p>
+                    <a href="#">más info</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-couch"></i>
+                    <h2>Dirección de arte</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor inventore aliquid illo omnis
+                        voluptas dolores enim porro incidunt blanditiis ipsam. Blanditiis quas repellat perspiciatis
+                        officiis accusantium amet enim, unde dolorum!</p>
+                    <a href="#">más info</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-martini-glass"></i>
+                    <h2>Eventos</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor inventore aliquid illo omnis
+                        voluptas dolores enim porro incidunt blanditiis ipsam. Blanditiis quas repellat perspiciatis
+                        officiis accusantium amet enim, unde dolorum!</p>
+                    <a href="#">más info</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!- - - -- -  proyectos  - - -- - - -
+    <div id="proyectos">
+        <div class="container2">
+            <h1 class="sub-title">trabajos</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/proy1.png">
+                    <div class="layer">
+                        <h3>THAMES</h3>
+                        <p>Remodelación y diseño de interior - monoambiente - caba </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/proy2.png">
+                    <div class="layer">
+                        <h3>WENDI CLUB</h3>
+                        <p>Remodelación y diseño de interior - monoambiente - caba </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/proy3.png">
+                </div>
+                <div class="work">
+                    <img src="images/proy4.png">
+                </div>
+                <div class="work">
+                    <img src="images/proy5.png">
+                </div>
+            </div>
+        </div>
+    </div>
+     - - -- -  contacto  - - -- - - 
+    <div id="contacto">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">contactanos :)</h1>
+                    <p><i class="fa-solid fa-sun"></i> rancho@studio</p>
+                    <p><i class="fa-solid fa-sun"></i> TEL</p>
+                    <p><i class="fa-solid fa-sun"></i> CABA / BS. AS. / ARG</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/rancho.studio/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Nombre" placeholder="nombre" required>
+                        <input type="email" name="email" placeholder="mail" required>
+                        <textarea name="message" rows="6" placeholder="hacenos tu consulta!"></textarea>
+                        <button type="submit" class="btn"><i class="fa-solid fa-rocket"></i></button>
+                    </form>
+                    <span id="msg">gracias!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="arrow">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
+    </div>
+    -->
+    <script>
+      var sidemenu = document.getElementById('sidemenu')
+      function openmenu() {
+        sidemenu.style.right = '0'
+      }
+      function closemenu() {
+        sidemenu.style.right = '-200px'
+      }
+    </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxptavK05BuT4mCrPqh_2CsoXh94P2AfnKuBzrWsiKjL7qng3XgbNE6BW0DqlV_Lank/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById('msg')
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = 'mensaje enviado'
+            setTimeout(function () {
+              msg.innerHTML = ' '
+            }, 5000)
+            form.reset()
+          })
+          .catch((error) => console.error('Error!', error.message))
+      })
+    </script>
+    <script>
+      let mybutton = document.getElementById('myBtn')
+      window.onscroll = function () {
+        scrollFunction()
+      }
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = 'block'
+        } else {
+          mybutton.style.display = 'none'
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0
+        document.documentElement.scrollTop = 0
+      }
+    </script>
+  </body>
+</html>

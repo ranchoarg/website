@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rancho Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/fc3548ab28.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <img src="images/logorancho.png" class="logo" />
+        <ul id="sidemenu">
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="servicios.html">servicios</a></li>
+          <li><a href="proyectos.html">proyectos</a></li>
+          <li><a href="contacto.html" style="color: #2963b8">contacto</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-ellipsis" onclick="openmenu()"></i>
+      </nav>
+    </div>
+    <div id="contacto">
+      <div class="container">
+        <div style="display: flex; color: black">
+          <a style="width: 20%; display: flex; flex-direction: column; gap: 30px">
+            <p>Buenos Aires</p>
+            <p>Tlf +54 9 112 345 7890</p>
+            <p>@rancho.arg</p>
+          </a>
+          <a style="width: 60%; display: flex; flex-direction: column; gap: 30px">
+            <img src="images/fondi.png" style="width: 100%" />
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid black">
+              <input style="border: none; text-align: end; font-size: large; width: 100%" placeholder="nombre" />
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid black">
+              <input style="border: none; text-align: end; font-size: large; width: 100%" placeholder="mail" type="email" />
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid black">
+              <input style="border: none; text-align: end; font-size: large; width: 100%" placeholder="celular" type="number" />
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid black">
+              <input style="border: none; text-align: end; font-size: large; width: 100%" placeholder="mensaje" />
+            </div>
+
+            <button onclick="send()" style="width: 100px; align-self: end; background-color: transparent; border: none; cursor: pointer">
+              <img src="images/Recurso 12@4x.png" style="width: 100%" />
+            </button>
+          </a>
+          <a style="width: 20%; position: relative">
+            <div style="display: flex; flex-direction: column; gap: 30px; text-align: end; position: absolute; bottom: 0; right: 0%">
+              <p>contacto@rancho.com</p>
+              <p>rancho.com</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxptavK05BuT4mCrPqh_2CsoXh94P2AfnKuBzrWsiKjL7qng3XgbNE6BW0DqlV_Lank/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById('msg')
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = 'mensaje enviado'
+            setTimeout(function () {
+              msg.innerHTML = ' '
+            }, 5000)
+            form.reset()
+          })
+          .catch((error) => console.error('Error!', error.message))
+      })
+    </script>
+  </body>
+</html>

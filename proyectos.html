@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rancho Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/fc3548ab28.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <img src="images/logorancho.png" class="logo" />
+      <ul id="sidemenu">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="servicios.html">servicios</a></li>
+        <li><a href="proyectos.html" style="color: #2963b8;">proyectos</a></li>
+        <li><a href="contacto.html">contacto</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-ellipsis" onclick="openmenu()"></i>
+    </nav>
+  </div>
+  <div id="proyectos">
+    <div class="container2">
+      <div class="work-list">
+        <div class="work">
+          <a href="proyecto1.html">
+            <img src="images/Recurso 19@4x.png" />
+            <div class="layer">
+              <img src="images/proyectos/TH.png" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="work">
+          <a href="proyecto6.html">
+            <img src="images/Recurso 20@4x.png" />
+            <div class="layer">
+              <img src="images/proyectos/WC.png" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="work">
+          <a href="proyecto5.html">
+            <img src="images/proy3.png" />
+            <div class="layer">
+              <img src="images/proyectos/PTO.png" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="work">
+          <a href="proyecto4.html">
+            <img src="images/Recurso 17@4x.png" />
+            <div class="layer">
+              <img src="images/proyectos/TIG.png" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="work">
+          <a href="proyecto3.html">
+            <img src="images/proy5.png" />
+            <div class="layer">
+              <img src="images/proyectos/NOR.png" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="work">
+          <a href="proyecto2.html">
+            <img src="images/Recurso 21@4x.png" />
+            <div class="layer">
+              <img src="images/proyectos/LFM.png" alt="">
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="arrow">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
+  </div>
+  <script>
+    let mybutton = document.getElementById('myBtn')
+    window.onscroll = function () {
+      scrollFunction()
+    }
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = 'block'
+      } else {
+        mybutton.style.display = 'none'
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0
+      document.documentElement.scrollTop = 0
+    }
+  </script>
+</body>
+
+</html>
